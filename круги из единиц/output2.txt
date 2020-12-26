@@ -1,0 +1,3 @@
+end time - 0.743 sec
+radius = 15
+center (20;20)

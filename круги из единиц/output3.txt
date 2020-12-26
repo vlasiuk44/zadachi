@@ -1,0 +1,3 @@
+end time - 0.790 sec
+radius = 135
+center (205;190)
