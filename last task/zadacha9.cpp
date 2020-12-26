@@ -6,7 +6,7 @@ using namespace std;
 
 
 
-int main(int argc, const char* argv[])
+int main()
 {
     int a[] = { 1,2,1,3,2,3,4,5,6,5,5,6,7,4,8,1 };
     int n = 16;
