@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-	int kucha = 100; //любое число камней
+	int kucha = 100; //любое число камней >  0
 	int hod_1_cheloveka;
 	int hod_2_cheloveka;
 	hod_1_cheloveka = 1;
