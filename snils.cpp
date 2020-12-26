@@ -1,4 +1,9 @@
 
+#include <fstream>
+#include <iostream>
+#include <cmath>
+#include <String>
+using namespace std;
 
 bool prime(long long n) {
     for (long long i = 2; i <= sqrt(n); i++)
