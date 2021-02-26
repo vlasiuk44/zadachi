@@ -13,20 +13,23 @@ bool prostoe(long long num) {
 }
 
 int main() {
-    ifstream fin("e.txt");
-    string chislo, buffer,str;
-    
+    ifstream fin("enew.txt");
+    string chislo, buffer, str;
+
 
     while (fin >> buffer) {
         chislo += buffer;
     }
-    
+
     for (int k = 9; k < chislo.length(); k++) {
         str = "";
-        for (int i = k - 9; i<= k; i++) {
+        for (int i = k - 9; i <= k; i++) {
+            if (int(chislo[i] > 58 || chislo[i] < 48)){ 
+                continue;
+            }
             str += chislo[i];
         }
-     
+
         long long l = stoll(str);
         if (!prostoe(l)) {
             cout << l;
