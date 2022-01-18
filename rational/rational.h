@@ -51,4 +51,4 @@ public:
 	Rational Sqrt_rational();
 };
 
-#endif // ! RATIONAL_H
+#endif
