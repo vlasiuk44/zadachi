@@ -1,0 +1,4 @@
+﻿  MySet.cpp
+C:\Users\Максим\Desktop\Set\Set\MySet.cpp(18,3): warning C4834: отмена возвращаемого значения функции с атрибутом "nodiscard"
+C:\Users\Максим\Desktop\Set\Set\MySet.cpp(68,21): warning C4018: <: несоответствие типов со знаком и без знака
+  Set.vcxproj -> C:\Users\Максим\Desktop\Set\Debug\Set.exe
