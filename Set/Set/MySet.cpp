@@ -1,11 +1,5 @@
 
-#define _CRT_SECURE_NO_WARNINGS
-#include <string>
-#include <iostream>
-#include <vector>
-#include <fstream>
-#include <cstring>
-#include <algorithm> 
+
 
 #include "MySet.h"
 using namespace std;
@@ -14,6 +8,7 @@ using namespace std;
 
 
 	void MySet::getSort() {
+		
 		sort(CharStr.begin(), CharStr.end());
 		unique(CharStr.begin(), CharStr.end());
 	}
@@ -24,7 +19,7 @@ using namespace std;
 		return this->CharStr.size();
 	}
 
-	int MySet::coincidences(MySet set) { //ÒÓ‚Ô‡‰ÂÌËˇ
+	int MySet::coincidences(MySet set) { //—Å–æ–≤–ø–∞–¥–µ–Ω–∏—è
 		int counter = 0;
 		for (char ch : this->CharStr) {
 			bool inStr = find(set.CharStr.begin(), set.CharStr.end(), ch) != set.CharStr.end();
@@ -48,15 +43,20 @@ using namespace std;
 	}
 
 	MySet MySet::append(char ch) {
-		//if((ch >= '¿' && ch <= 'ˇ') || ch == '∏' || ch == '®')
+		
+		ch = tolower(ch);
+		//if((ch >= '–ê' && ch <= '—è') || ch == '—ë' || ch == '–Å')
 		this->CharStr.push_back(ch);
 		return *this;
 	}
 
 	MySet MySet::append(string str) {
-		for (char ch : str)
-			//if ((ch >= '¿' && ch <= 'ˇ') || ch == '∏' || ch == '®')
-			this->CharStr.push_back(ch);
+
+		for (char ch : str){
+			ch = tolower(ch);
+		//if ((ch >= '–ê' && ch <= '—è') || ch == '—ë' || ch == '–Å')
+		this->CharStr.push_back(ch);
+	}
 		return *this;
 	}
 
@@ -66,14 +66,18 @@ using namespace std;
 
 	MySet& MySet::operator<<(string str) {
 		for (int i = 0; i < str.length(); i++) {
-			//if ((str[i] >= '¿' && str[i] <= 'ˇ') || str[i] == '∏' || str[i] == '®')
+			tolower(str[i]);
+
+			//if ((str[i] >= '–ê' && str[i] <= '—è') || str[i] == '—ë' || str[i] == '–Å')
 			this->CharStr.push_back(str[i]);
 		}
 		return *this;
 	}
 
 	MySet& MySet::operator<<(char ch) {
-		//if ((ch >= '¿' && ch <= 'ˇ') || ch == '∏' || ch == '®')
+		//if ((ch >= '–ê' && ch <= '—è') || ch == '—ë' || ch == '–Å')
+		tolower(ch);
+
 		this->CharStr.push_back(ch);
 
 		return *this;
