@@ -1,22 +1,7 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
-#include <string>
-#include <iostream>
-#include <vector>
-#include <fstream>
-#include <cstring>
-#include <algorithm> 
 #include "MySet.h"
 using namespace std;
 
-
-
-
-
-
-
-
-
-//пересечение
 
 int main(int argc, char* argv[]) {
 	setlocale(LC_ALL, "Russian");
