@@ -8,9 +8,12 @@ using namespace std;
 
 
 	void MySet::getSort() {
-		
+		auto last = unique(CharStr.begin(), CharStr.end());
+		CharStr.erase(last, CharStr.end());
 		sort(CharStr.begin(), CharStr.end());
-		unique(CharStr.begin(), CharStr.end());
+		last = unique(CharStr.begin(), CharStr.end());
+		CharStr.erase(last, CharStr.end());
+		
 	}
 
 
@@ -66,7 +69,7 @@ using namespace std;
 
 	MySet& MySet::operator<<(string str) {
 		for (int i = 0; i < str.length(); i++) {
-			tolower(str[i]);
+			str[i]=tolower(str[i]);
 
 			//if ((str[i] >= 'А' && str[i] <= 'я') || str[i] == 'ё' || str[i] == 'Ё')
 			this->CharStr.push_back(str[i]);
